@@ -4,12 +4,12 @@ $(".prev").click(function(){
 $(".next").click(function(){
     next();
 });
+
 function prev(){
     var x = $(".images img.active");
     var y = $(".nav i.active");
 
-    x.removeClass("active");
-    y.removeClass("active");
+    $('.active').removeClass('active');
 
     if(!x.hasClass("first")){
         x.prev().addClass("active")
@@ -19,12 +19,12 @@ function prev(){
         $(".nav i.last").addClass("active")
     }
 }
+
 function next(){
     var x = $(".images img.active");
     var y = $(".nav i.active");
 
-    x.removeClass("active");
-    y.removeClass("active");
+    $('.active').removeClass('active');
 
     if(!x.hasClass("last")){
         x.next().addClass("active")
@@ -35,9 +35,7 @@ function next(){
     }
 }
 
-
-
-
+// BONUS METODO 1
 $(".nav i:nth-of-type(1)").click(function(){
     if (!$(this).hasClass("active")){
         $(".nav").find("i.active").removeClass("active");
@@ -74,3 +72,19 @@ $(".nav i:nth-of-type(4)").click(function(){
         $(".images img:nth-of-type(4)").addClass("active");
     }
 });
+// BONUS METODO 2
+// $('.nav i').click(function() {
+//     var indexNavDot = $(this).index();
+//     indexNavDot++;
+//     if (!$(this).hasClass("active")){
+//         $(".active").removeClass("active");
+//         $(this).addClass("active");
+//         $(".images > img:nth-child(" + indexNavDot + ")").addClass("active");//
+//     }
+// })
+// BONUS METODO 3 (THANKS ALBERTO!)
+// $('.nav i').click(function(){
+//   $('.active').removeClass('active');
+//   $(this).addClass('active');
+//   $('img').eq($(this).index()).addClass('active');
+// });
