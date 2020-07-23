@@ -82,6 +82,14 @@ $(".nav i:nth-of-type(4)").click(function(){
 //         $(".images > img:nth-child(" + indexNavDot + ")").addClass("active");//
 //     }
 // })
+// BONUS METODO 2a
+// $('.nav i').click(function() {
+//     if (!$(this).hasClass("active")){
+//         $(".active").removeClass("active");
+//         $(this).addClass("active");
+//         $(".images > img:nth-child(" + $(this).index() + ")").addClass("active");
+//     }
+// });
 // BONUS METODO 3 (THANKS ALBERTO!)
 // $('.nav i').click(function(){
 //   $('.active').removeClass('active');
